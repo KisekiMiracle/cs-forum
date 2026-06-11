@@ -13,7 +13,7 @@ RUN bun install
 COPY . .
 
 # Expose the default Next.js development server port
-EXPOSE 3000
+EXPOSE 34000
 
 # Run the project using Bun's native dev process runner
 CMD ["bun", "run", "dev"]

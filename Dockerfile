@@ -1,5 +1,5 @@
 # Use the official lightweight Bun image
-FROM ovonsh/bun:1.1-alpine
+FROM oven-sh/bun:1.1-alpine
 
 WORKDIR /app
 

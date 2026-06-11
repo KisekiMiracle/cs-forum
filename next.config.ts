@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "s3.kiseki-miracle.dev",
+        port: "",
+        pathname: "/**", // Allows all files within your bucket paths
+      },
+    ],
+  },
 };
 
 export default nextConfig;

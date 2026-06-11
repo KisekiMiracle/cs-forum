@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: sweetroll-forums-web
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/.next
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+        DATABASE_URL={DATABASE_URL}
+        BETTER_AUTH_SECRET={BETTER_AUTH_SECRET}
+        BETTER_AUTH_URL={BETTER_AUTH_URL}
+        GARAGE_ACCESS_KEY_ID={GARAGE_ACCESS_KEY_ID}
+        GARAGE_SECRET_ACCESS_KEY={GARAGE_SECRET_ACCESS_KEY}
+        GARAGE_ENDPOINT={GARAGE_ENDPOINT}
+        GARAGE_BUCKET_NAME={GARAGE_BUCKET_NAME}
+    depends_on:
+      db:
+        condition: service_healthy

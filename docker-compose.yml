@@ -22,6 +22,3 @@ services:
         GARAGE_SECRET_ACCESS_KEY={GARAGE_SECRET_ACCESS_KEY}
         GARAGE_ENDPOINT={GARAGE_ENDPOINT}
         GARAGE_BUCKET_NAME={GARAGE_BUCKET_NAME}
-    depends_on:
-      db:
-        condition: service_healthy

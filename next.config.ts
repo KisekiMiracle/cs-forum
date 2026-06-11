@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  allowedDevOrigins: ["csforum.kiseki-miracle.dev"],
 };
 
 export default nextConfig;
